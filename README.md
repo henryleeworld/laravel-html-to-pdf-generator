@@ -1,4 +1,4 @@
-# Laravel 6 HTML 轉 PDF 產生器
+# Laravel 7 HTML 轉 PDF 產生器
 
 引入 barryvdh 的 laravel-snappy 套件來擴增實作藉由命令列工具 wkhtmltopdf （需要安裝在伺服器上）將 HTML 轉換為 PDF 檔案。
 
@@ -24,7 +24,7 @@ $ php artisan key:generate
 'binary' => base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'),
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以登入經由 `/generate-pdf` 來產生 PDF。
+- 你可以經由 `/generate-pdf` 來產生 PDF。
 
 ----
 
