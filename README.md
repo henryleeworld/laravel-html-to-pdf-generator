@@ -1,4 +1,4 @@
-# Laravel 7 HTML 轉 PDF 產生器
+# Laravel 8 HTML 轉 PDF 產生器
 
 引入 barryvdh 的 laravel-snappy 套件來擴增實作藉由命令列工具 wkhtmltopdf （需要安裝在伺服器上）將 HTML 轉換為 PDF 檔案。
 
@@ -12,9 +12,13 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
+```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+```sh
+$ php artisan migrate --seed
 ```
 - 安裝 wkhtmltopdf，採用 Webkit 核心，產生的 PDF 挺逼近實際網頁。
   - 從[這裡](http://wkhtmltopdf.org/downloads.html)下載 wkhtmltopdf。 
@@ -24,10 +28,10 @@ $ php artisan key:generate
 'binary' => base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'),
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/generate-pdf` 來產生 PDF。
+- 你可以經由 `/users/show` 來瀏覽使用者資料，點擊按鈕儲存成 PDF。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/kuocbXM.png)
+![](https://i.imgur.com/gCNEeyv.png)
 > 下載 PDF 後使用 Adobe Acrobat Reader 確認中文是否亂碼 
