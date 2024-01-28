@@ -86,7 +86,7 @@
     <body class="antialiased">
         <div class="container mt-5">
             <div class="d-flex justify-content-center">
-                <img src="data:image/jpg;base64, {{ base64_encode(@file_get_contents(public_path('images/kamen-rider-black.jpg'))) }}" width="30" height="30" alt="Flowers in Chania">
+                <img src="data:image/jpg;base64, {{ base64_encode(@file_get_contents(storage_path('images/kamen-rider-black.jpg'))) }}" width="30" height="30" alt="Flowers in Chania">
             </div>
             <table class="table table-bordered mb-5">
                 <thead>
