@@ -1,4 +1,4 @@
-# Laravel 10 HTML 轉 PDF 產生器
+# Laravel 11 HTML 轉 PDF 產生器
 
 引入 barryvdh 的 laravel-snappy 套件來擴增實作藉由命令列工具 wkhtmltopdf （需要安裝在伺服器上）將 HTML 轉換為 PDF 檔案。
 
@@ -33,5 +33,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/w4gJHCZ.png)
-> 下載 PDF 後使用 Adobe Acrobat Reader 確認中文是否亂碼 
+![](https://i.imgur.com/e9UMkHu.png)
+> 下載 PDF 後使用 Adobe Acrobat Reader 確認中文是否亂碼

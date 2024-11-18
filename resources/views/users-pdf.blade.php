@@ -40,20 +40,8 @@
                 -webkit-font-smoothing: antialiased;
             }
 
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl {
+            .container {
                 max-width: 1140px;
-            }
-
-            .container,
-            .container-fluid,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl {
                 width: 100%;
                 padding-right: 15px;
                 padding-left: 15px;
@@ -92,10 +80,10 @@
                 <thead>
                     <tr class="table-danger">
                         <th scope="col">#</th>
-                        <th scope="col">姓名</th>
-                        <th scope="col">電子郵件</th>
-                        <th scope="col">建立時間</th>
-                        <th scope="col">更新時間</th>
+                        <th scope="col">{{ __('Name') }}</th>
+                        <th scope="col">{{ __('Email') }}</th>
+                        <th scope="col">{{ __('Created at') }}</th>
+                        <th scope="col">{{ __('Updated at') }}</th>
                     </tr>
                 </thead>
                 <tbody>
