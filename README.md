@@ -1,8 +1,11 @@
-# Laravel 11 HTML 轉 PDF 產生器
+# Laravel 12 HTML 轉 PDF 產生器
 
 引入 barryvdh 的 laravel-snappy 套件來擴增實作藉由命令列工具 wkhtmltopdf （需要安裝在伺服器上）將 HTML 轉換為 PDF 檔案。
 
 ## 使用方式
+- 安裝 wkhtmltopdf，採用 Webkit 核心，產生的 PDF 挺逼近實際網頁。
+  - 從[這裡](http://wkhtmltopdf.org/downloads.html)下載 wkhtmltopdf。 
+  - 或是安裝成外部工具庫，請參考[視為依賴關係](https://github.com/KnpLabs/snappy#wkhtmltopdf-binary-as-composer-dependencies)以取得更多資訊。
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
 ```sh
 $ git clone
@@ -20,18 +23,14 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
-- 安裝 wkhtmltopdf，採用 Webkit 核心，產生的 PDF 挺逼近實際網頁。
-  - 從[這裡](http://wkhtmltopdf.org/downloads.html)下載 wkhtmltopdf。 
-  - 或是安裝成外部工具庫，請參考[視為依賴關係](https://github.com/KnpLabs/snappy#wkhtmltopdf-binary-as-composer-dependencies)以取得更多資訊。
-- 在 config/snappy.php 設定依賴軟體 wkhtmltopdf 的路徑。
-```php
-'binary' => base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'),
-```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/users/show` 來瀏覽使用者資料，點擊按鈕儲存成 PDF。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/e9UMkHu.png)
+![](https://i.imgur.com/1K4NyHg.png)
+> 顯示所有使用者資料清單
+
+![](https://i.imgur.com/EHbbCdm.png)
 > 下載 PDF 後使用 Adobe Acrobat Reader 確認中文是否亂碼
